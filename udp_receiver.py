@@ -5,8 +5,9 @@ UDP_IP = "0.0.0.0"
 UDP_PORT = 5001
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-socket.bind((UDP_IP, UDP_PORT))
+sock.bind((UDP_IP, UDP_PORT))
 
+print("1 change")
 print("UDP Server started !")
 while True:
 	data, addr = sock.recvfrom(1024)
